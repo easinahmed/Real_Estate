@@ -1,0 +1,265 @@
+/* ==========================
+   All Common Style Start
+============================= */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+:root{
+    --main-font:"Poppins", sans-serif;
+    --second-font: "Nunito", sans-serif;
+    --header-color: #0A2C3D;
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+/* ==========================
+   All Common Style ends
+============================= */
+
+
+
+
+
+
+
+/* ==========================
+   Header Style starts
+============================= */
+header{
+    background: var(--header-color);
+    color: #ffffff;
+}
+
+
+
+
+.header_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header_text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.header_text p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    font-family: var(--second-font);
+    font-size: 14px;
+}
+
+.header_icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+.header_icon i{
+    color: #ffffff;
+    font-size: 16px;
+   
+}
+
+.header_icon button{
+    padding: 18px 26px;
+    height: 100%;
+    background: #FF5A3C;
+    color: #ffffff;
+    font-family: var(--main-font);
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+
+/* ==========================
+   Header Style ends
+============================= */
+
+
+/* ==========================
+   Nav Style starts
+============================= */
+
+nav{
+    padding: 30px 0;
+    background: #ffffff;
+}
+
+.nav_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav_container .logo{
+    max-width: 175px;
+}
+.nav_container .logo img{
+    width: 100%;
+}
+.nav_container .menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+.nav_container .menu ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.nav_container .menu ul li a{
+    font-family: var(--second-font);
+    color: #0A2C3D;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav_container .menu ul li.active a{
+    color: #FF5A3C;
+}
+
+.nav_container .menu .menu_icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.nav_container .menu .menu_icon a{
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    box-shadow: 0 3px 15px hsla(231, 25%, 22%, 0.134);
+}
+
+
+/* ==========================
+   Nav Style ends
+============================= */
+
+
+/* ==========================
+   Banner Section Style starts
+============================= */
+
+#banner{
+    padding: 94px 0 172px 0;
+    background: url("../images/shape.png"), #F2F6F7;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: -30%;
+    background-position-y: -30%;
+    
+}
+
+.banner_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 127px;
+    position: relative;
+  
+}
+
+.banner_container button.btn{
+    position: absolute;
+    transform: translateX(-15em);
+    padding: 17px 19px;
+    background-color: #ffffffe0;
+    border: none;
+    color: #FF5A3C;
+}
+
+.banner_container button.btn i{
+    font-size: 16px;
+}
+
+.banner_text p:first-child{
+    font-family: var(--second-font);
+    font-size: 16px;
+}
+
+.banner_text h1{
+    font-family: var(--main-font);
+    color: #000000;
+    font-size: 60px;
+    font-weight: bold;
+    width: 513px;
+    margin-top: 13px;
+    margin-bottom: 7px;
+}
+
+.banner_text p:nth-child(3){
+    color: #5C727D;
+    font-family: var(--second-font);
+    font-size: 16px;
+    margin-bottom: 26px;
+}
+
+.banner_text img{
+
+    vertical-align: middle;
+}
+
+.banner_text button{
+    padding: 14px 26px;
+    background-color: #FF5A3C;
+    color: #ffffff;
+    border: none;
+    
+}
+
+.banner_container .banner_image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+}
+
+.banner_image button{
+    padding: 17px 19px;
+    background-color: #FF5A3C;
+    color: #ffffff;
+    border: none;
+    position: absolute;
+    transform: translateX(30em);
+}
+
+.banner_image button i{
+    font-size: 16px;
+}
+    
+
+
+
+/* ==========================
+   Banner Section Style ends
+============================= */
+
