@@ -2,29 +2,30 @@
    All Common Style Start
 ============================= */
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.container{
+.container {
     max-width: 1170px;
     margin: 0 auto;
 }
 
-:root{
-    --main-font:"Poppins", sans-serif;
+:root {
+    --main-font: "Poppins", sans-serif;
     --second-font: "Nunito", sans-serif;
     --header-color: #0A2C3D;
-    
+
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-ul, ol {
+ul,
+ol {
     list-style: none;
 }
 
@@ -41,7 +42,7 @@ ul, ol {
 /* ==========================
    Header Style starts
 ============================= */
-header{
+header {
     background: var(--header-color);
     color: #ffffff;
 }
@@ -49,7 +50,7 @@ header{
 
 
 
-.header_container{
+.header_container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -62,7 +63,7 @@ header{
     gap: 20px;
 }
 
-.header_text p{
+.header_text p {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -71,19 +72,20 @@ header{
     font-size: 14px;
 }
 
-.header_icon{
+.header_icon {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 18px;
 }
-.header_icon i{
+
+.header_icon i {
     color: #ffffff;
     font-size: 16px;
-   
+
 }
 
-.header_icon button{
+.header_icon button {
     padding: 18px 26px;
     height: 100%;
     background: #FF5A3C;
@@ -103,55 +105,58 @@ header{
    Nav Style starts
 ============================= */
 
-nav{
+nav {
     padding: 30px 0;
     background: #ffffff;
 }
 
-.nav_container{
+.nav_container {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.nav_container .logo{
+.nav_container .logo {
     max-width: 175px;
 }
-.nav_container .logo img{
+
+.nav_container .logo img {
     width: 100%;
 }
-.nav_container .menu{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-}
-.nav_container .menu ul{
+
+.nav_container .menu {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 40px;
 }
 
-.nav_container .menu ul li a{
+.nav_container .menu ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.nav_container .menu ul li a {
     font-family: var(--second-font);
     color: #0A2C3D;
     font-size: 18px;
     font-weight: bold;
 }
 
-.nav_container .menu ul li.active a{
+.nav_container .menu ul li.active a {
     color: #FF5A3C;
 }
 
-.nav_container .menu .menu_icon{
+.nav_container .menu .menu_icon {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
 }
 
-.nav_container .menu .menu_icon a{
+.nav_container .menu .menu_icon a {
     display: flex;
     align-items: center;
     padding: 10px 12px;
@@ -168,44 +173,57 @@ nav{
    Banner Section Style starts
 ============================= */
 
-#banner{
+#banner {
     padding: 94px 0 172px 0;
-    background: url("../images/shape.png"), #F2F6F7;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position-x: -30%;
-    background-position-y: -30%;
-    
+    background: #F2F6F7;
+
+
 }
 
-.banner_container{
+.banner_container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 127px;
     position: relative;
-  
+
 }
 
-.banner_container button.btn{
+.banner_container button.btn {
     position: absolute;
-    transform: translateX(-15em);
+    transform: translate(-15%, 0);
+    top: 50%;
+    left: -20%;
     padding: 17px 19px;
-    background-color: #ffffffe0;
+    background-color: #ffffff90;
     border: none;
     color: #FF5A3C;
+    box-shadow: 0 3px 16px hsla(224, 76%, 34%, 0.105);
+    cursor: pointer;
 }
 
-.banner_container button.btn i{
+.banner_container button.btn i {
     font-size: 16px;
 }
 
-.banner_text p:first-child{
+.banner_container .shape {
+    position: absolute;
+    top: 76%;
+    left: -58%;
+    transform: translate(0%, -51%);
+
+}
+
+.banner_text p:first-child {
     font-family: var(--second-font);
     font-size: 16px;
 }
 
-.banner_text h1{
+.banner_text p:first-child img {
+    vertical-align: middle;
+}
+
+.banner_text h1 {
     font-family: var(--main-font);
     color: #000000;
     font-size: 60px;
@@ -215,27 +233,28 @@ nav{
     margin-bottom: 7px;
 }
 
-.banner_text p:nth-child(3){
+.banner_text p:nth-child(3) {
     color: #5C727D;
     font-family: var(--second-font);
     font-size: 16px;
     margin-bottom: 26px;
 }
 
-.banner_text img{
-
+.banner_text img {
+    cursor: pointer;
     vertical-align: middle;
 }
 
-.banner_text button{
+.banner_text button {
     padding: 14px 26px;
     background-color: #FF5A3C;
     color: #ffffff;
     border: none;
-    
+    cursor: pointer;
+
 }
 
-.banner_container .banner_image{
+.banner_container .banner_image {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -243,23 +262,25 @@ nav{
     position: relative;
 }
 
-.banner_image button{
+.banner_image button {
     padding: 17px 19px;
     background-color: #FF5A3C;
     color: #ffffff;
     border: none;
     position: absolute;
-    transform: translateX(30em);
+    transform: translate(30%, 0);
+    top: 50%;
+    right: -10%;
+    cursor: pointer;
 }
 
-.banner_image button i{
+.banner_image button i {
     font-size: 16px;
 }
-    
+
 
 
 
 /* ==========================
    Banner Section Style ends
 ============================= */
-
