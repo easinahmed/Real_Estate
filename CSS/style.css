@@ -94,6 +94,11 @@ header {
     font-size: 14px;
     border: none;
     cursor: pointer;
+    transition: all linear 0.3s;
+}
+
+.header_icon button:hover{
+    background: #e04328;
 }
 
 /* ==========================
@@ -143,7 +148,32 @@ nav {
     color: #0A2C3D;
     font-size: 18px;
     font-weight: bold;
+    transition: all linear 0.3s;
 }
+
+.nav_container .menu ul li{
+    position: relative;
+}
+
+.nav_container .menu ul li::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: #FF5A3C;
+    top: 120%;
+    left: 0;
+    transition: all linear 0.3s;
+}
+
+.nav_container .menu ul li:hover::after{
+    width: 100%;
+}
+.nav_container .menu ul li a:hover{
+    color: #FF5A3C;
+}
+
+
 
 .nav_container .menu ul li.active a {
     color: #FF5A3C;
@@ -251,7 +281,12 @@ nav {
     color: #ffffff;
     border: none;
     cursor: pointer;
+    transition: all linear 0.3s;
 
+}
+
+.banner_text button:hover{
+    background: #e04328;
 }
 
 .banner_container .banner_image {
@@ -272,10 +307,15 @@ nav {
     top: 50%;
     right: -10%;
     cursor: pointer;
+    transition: all linear 0.3s;
 }
 
 .banner_image button i {
     font-size: 16px;
+}
+
+.banner_image button:hover{
+    background: #e04328;
 }
 
 
@@ -284,3 +324,71 @@ nav {
 /* ==========================
    Banner Section Style ends
 ============================= */
+
+
+/* ===========================
+    searchbox style starts
+=============================== */
+.searchbox_container{
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 44px 24px 33px 30px;
+  gap: 10px;
+  max-width: 1170px;
+  margin-top: -60px;
+}
+
+.searchbox_container select {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  color: #555;
+  cursor: pointer;
+  transition: all linear 0.3s;
+}
+
+.searchbox_container select:first-child {
+  border-color: #ff4d30;
+}
+
+.searchbox_container select:focus {
+  border-color: #ff4d30;
+  outline: none;
+}
+
+.filter_btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #ff4d30;
+  cursor: pointer;
+  padding: 8px;
+  transition: transform 0.2s;
+}
+
+.filter_btn:hover {
+  transform: rotate(20deg);
+}
+
+.find_now {
+  background: #ff4d30;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all linear 0.3s;
+}
+
+.find_now:hover {
+  background: #e04328;
+}
+
+
+/* ===========================
+    searchbox style starts
+=============================== */
