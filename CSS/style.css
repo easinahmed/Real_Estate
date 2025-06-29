@@ -25,7 +25,7 @@ a {
 }
 
 ul,
-ol {
+ol, li {
     list-style: none;
 }
 
@@ -504,6 +504,7 @@ nav {
     justify-content: start;
     gap: 13px;
     margin-bottom: 10px;
+    
 }
 
 .list .list_icon_text p{
@@ -563,4 +564,174 @@ nav {
 }
 /* ===========================
     About  style ends
+=============================== */
+
+
+
+/* ===========================
+    Number  style starts
+=============================== */
+#Number{
+    background: hsla(249, 54%, 97%, 0.762);
+}
+
+.number_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.number_container .icon_text{
+    padding: 76px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 292px;
+    transition: all linear 0.3s;
+    cursor: pointer;
+}
+
+.icon_text h2{
+    margin-top: 32px;
+    margin-bottom: 5px;
+    font-size: 42px;
+    font-family: var(--main-font);
+}
+
+.icon_text p{
+    font-size: 20px;
+    font-family: var(--second-font);
+    color: #5C727D;
+    font-weight: bold;
+}
+
+.icon_text::before{
+    content: "";
+    position: absolute;
+    background-color: #FF5A3C;
+    width: 3px;
+    height: 38px;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    opacity: 0;
+    transition: ease-in 0.3s;
+}
+
+.icon_text::after{
+      content: "";
+    position: absolute;
+    background-color: #FF5A3C;
+    width: 3px;
+    height: 38px;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    opacity: 0;
+    transition: ease-in 0.3s;
+
+}
+.icon_text:hover{
+    background: #ffffff;
+    transform: scale(1.1);
+}
+
+.icon_text:hover::before, .icon_text:hover::after{
+    opacity: 1;
+}
+
+
+/* ===========================
+    Number  style ends
+=============================== */
+
+
+
+/* ===========================
+    About_2  style starts
+=============================== */
+
+#About_2{
+    padding: 118px 0;
+}
+
+.about2_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 102px;
+}
+
+.about2_container .text h3{
+    display: inline-block;
+    border-radius: 1000px;
+    background-color: hsla(0, 95%, 65%, 0.12);
+    padding: 5px 28px;
+    background-size: contain;
+    color: #FF5A3C;
+    margin-bottom: 17px;
+}
+
+.about2_container .text h2{
+    font-family: var(--main-font);
+    font-size: 44px;
+    margin-bottom: 9px;
+}
+
+.about2_container .text p:nth-child(3){
+    font-size: 16px;
+    font-family: var(--second-font);
+    color: #5C727D;
+    margin-bottom: 25px;
+}
+
+
+.about2_container .text li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 18px;
+}
+
+.about2_container .text li p{
+    font-family: var(--second-font);
+    font-size: 16px;
+    font-weight: bold;
+    color: #0A2C3D;
+}
+
+.about2_container .text .about_icons{
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 340px;
+    margin-bottom: 35px;
+   
+}
+
+.about2_container .text .about_icons .icon {
+     border-right: 2px solid #7070707a;
+     padding-right: 10px;
+}
+
+.about2_container .text .about_icons .icon p:first-child{
+    font-size: 16px;
+    font-family: var(--main-font);
+    font-weight: 500;
+}
+
+.about2_container .text .about_icons .icon p:last-child{
+    font-size: 14px;
+    font-family: var(--second-font);
+    font-weight: bold;
+}
+
+.about2_container .image_slider{
+   transform: translateX(-15px);
+}
+/* ===========================
+    About_2  style endss
 =============================== */
