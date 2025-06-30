@@ -795,6 +795,11 @@ nav {
     box-shadow: 0 10px 35px rgba(36, 27, 162, 0.162);
     cursor: pointer;
     position: relative;
+    transition: all linear 0.3s;
+}
+
+.services_container .main:hover{
+    transform: translateY(-20px);
 }
 
 .services_main .main::after{
