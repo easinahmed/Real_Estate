@@ -1064,8 +1064,27 @@ nav {
 }
 
 
-#featured_listings .dot{
-    margin: 43px auto;
+#featured_listings .stamina_dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ff6347; /* tomato / orange */
+  opacity: 0.3;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  width: 14px;
+  height: 14px;
+  opacity: 1;
 }
 
 
