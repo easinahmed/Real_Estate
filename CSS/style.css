@@ -454,7 +454,7 @@ nav {
   transition: transform 0.3s ease;
 }
 
-.play_button span {
+.image_bottom .play_button span {
   font-size: 20px;
   color: #FF5A3C;
 }
@@ -1069,12 +1069,12 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 12px;
-  margin-top: 20px;
+  margin-top: 70px;
 }
 
 .dot {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   background-color: #ff6347; /* tomato / orange */
   opacity: 0.3;
   border-radius: 50%;
@@ -1092,3 +1092,276 @@ nav {
 /* ===========================
     Feature style ends
 =============================== */
+
+
+/* ==========================
+   Apartment Style Start
+============================== */
+
+#apartment{
+    text-align: center;
+}
+.apartment_container  h3:first-child{
+    display: inline-block;
+    border-radius: 1000px;
+    background-color: hsla(0, 95%, 65%, 0.12);
+    padding: 5px 28px;
+    background-size: contain;
+    color: #FF5A3C;
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: var(--second-font);
+}
+
+.apartment_container h2{
+    font-size: 48px;
+    font-weight: bold;
+    margin-top: 14px;
+    font-family: var(--main-font);
+}
+
+.apartment_container ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 52px;
+    margin-top: 31px;
+}
+
+.apartment_container ul li a{
+    color: #0A2C3D;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: var(--second-font);
+    position: relative;
+    transition: all linear 0.3s;
+    
+}
+
+.apartment_container ul li a::after{
+    content: "";
+    position: absolute;
+    background: url("../images/Apartment_Dash_line.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 0%;
+    height: 3px;
+    background-position: center;
+    left: 0;
+    
+    bottom: -10px;
+    transition: all linear 0.3s;
+}
+.apartment_container ul li a:hover{
+    color: #FB5252;
+}
+
+.apartment_container ul li a:hover::after{
+    width: 100%;
+}
+
+.apartment_container .apartment_info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 52px;
+    gap: 62px;
+}
+
+.apartment_info .info_text{
+    background: #FF5A3C;
+    padding: 79px 74px;
+    text-align: start;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.info_text h2{
+    color: #fff;
+    font-size: 30px;
+    font-family: var(--main-font);
+    font-weight: 600px;
+}
+
+.info_text p:nth-child(2){
+    font-size: 16px;
+    font-family: var(--second-font);
+    margin-bottom: 46px;
+
+}
+
+.details {
+      width: 440px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 20px 0;
+      font-size: 18px;
+      gap: 10px;
+    }
+
+    .dots {
+      flex: 1;
+      border-bottom: 1px dotted white;
+      margin: 0 10px;
+    }
+
+    .value {
+      white-space: nowrap;
+    }
+
+
+
+
+
+
+/* ==========================
+   Apartment Style Start
+============================== */
+
+
+/* ==========================
+   Video Style Start
+============================== */
+
+
+#video {
+  position: relative;
+  cursor: pointer;
+}
+
+#video .play_button{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+#video .play_button{
+    font-size: 30px;
+    color: #FF5A3C;
+}
+
+#video:hover .play_button{
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* ==========================
+   Video Style end
+============================== */
+
+
+/* ==========================
+   Property Style start
+============================== */
+#property{
+    padding: 100px 0;
+    text-align: center;
+}
+
+.property_container h3{
+    display: inline-block;
+    border-radius: 1000px;
+    background-color: hsla(0, 95%, 65%, 0.12);
+    padding: 5px 28px;
+    background-size: contain;
+    color: #FF5A3C;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: var(--second-font);
+}
+
+.property_container h2{
+    font-size: 48px;
+    font-weight: bold;
+    margin-top: 14px;
+    font-family: var(--main-font);
+}
+
+.property_container .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 270px);
+    gap: 30px;
+    margin-top: 37px;
+  }
+ .grid .card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s;
+    cursor: pointer;
+  }
+ .grid .card:hover {
+    transform: translateY(-10px);
+    background: #f45a40;
+    color: #fff;
+  }
+
+  .grid .card:hover .icon_circle{
+     background: #fff;
+    color: #f45a40;
+  }
+
+  .grid .card:hover .arrow{
+    color: #FF5A3C;
+  }
+
+
+ .card .icon_circle {
+    background: #ffe4dc;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    font-size: 28px;
+    color: #f45a40;
+  }
+.card  .title {
+    font-family: var(--main-font);
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 55px;
+  }
+ .card .arrow {
+    background: #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    position: absolute;
+    bottom: -15px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    font-size: 18px;
+    box-shadow: 0 0 14px hsla(234, 64%, 38%, 0.114);
+  }
+
+  
+
+
+/* ==========================
+   Property Style start
+============================== */
