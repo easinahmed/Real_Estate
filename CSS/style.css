@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 .container {
     max-width: 1170px;
     margin: 0 auto;
@@ -279,16 +283,34 @@ nav {
 
 .banner_text button {
     padding: 14px 26px;
-    background-color: #FF5A3C;
+    background-color: #fff;
     color: #ffffff;
-    border: none;
+    border: 1px solid #FF5A3C;
     cursor: pointer;
     transition: all linear 0.3s;
+    position: relative;
+    overflow: hidden;
 
 }
 
-.banner_text button:hover {
-    background: #e04328;
+.banner_text button::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: #FF5A3C;;
+  transition: all 0.4s ease;
+  z-index: -1;
+}
+
+.banner_text button:hover::before{
+   left: 100%;
+}
+
+.banner_text button:hover{
+    color: #FF5A3C;
 }
 
 .banner_container .banner_image {
@@ -319,6 +341,60 @@ nav {
 .banner_image button:hover {
     background: #e04328;
 }
+
+
+/* Common initial hidden style */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+/* Optional delays for staggered appearance */
+.delay-1 {
+  animation-delay: 0.3s;
+}
+.delay-2 {
+  animation-delay: 0.5s;
+}
+.delay-3 {
+  animation-delay: 0.7s;
+}
+.delay-4 {
+  animation-delay: 0.9s;
+}
+.delay-5 {
+  animation-delay: 1s;
+}
+
+/* Keyframes for the animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+ .banner_container .shape {
+  animation: fadeIN 2s ease-out forwards;
+  opacity: 0;
+  position: absolute;
+  top: 76%;
+  left: -62%;
+  transform: translate(0%, -51%);
+}
+
+@keyframes fadeIN {
+  0% {
+    
+    opacity: 0;
+  }
+  100% {
+    left: -58%;
+    opacity: 1;
+  }
+}
+
 
 
 
@@ -377,18 +453,39 @@ nav {
 }
 
 .find_now {
-    background: #ff4d30;
-    border: none;
+    border: 1px solid #FF5A3C;
     color: #fff;
+    background: #fff;
     padding: 10px 20px;
     font-size: 14px;
     cursor: pointer;
     transition: all linear 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 
-.find_now:hover {
-    background: #e04328;
+.find_now::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: #FF5A3C;;
+  transition: all 0.4s ease;
+  z-index: -1;
 }
+
+.find_now:hover{
+    color: #FF5A3C;
+}
+
+.find_now:hover::before {
+    left: 100%;
+    
+}
+
 
 
 /* ===========================
@@ -559,17 +656,38 @@ nav {
 
 .about_text button {
     padding: 14px 26px;
-    background-color: #FF5A3C;
+    background-color: #fff;
     color: #ffffff;
-    border: none;
+    border: 1px solid #FF5A3C;
     cursor: pointer;
     transition: all linear 0.3s;
     font-family: var(--main-font);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
 }
 
-.about_text button:hover {
-    background: #e04328;
+.about_text button::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: #FF5A3C;;
+  transition: all 0.4s ease;
+  z-index: -1;
 }
+
+.about_text button:hover{
+    color: #FF5A3C;
+}
+
+.about_text button:hover::before {
+    left: 100%;
+    
+}
+
 
 /* ===========================
     About  style ends
@@ -1254,6 +1372,10 @@ nav {
     cursor: pointer;
 }
 
+.video_footage img{
+    width: 100%;
+}
+
 #video .play_button {
     position: absolute;
     top: 50%;
@@ -1443,6 +1565,7 @@ nav {
     justify-content: space-between;
     gap: 30px;
     position: absolute;
+    transform: translateX(-7%);
 }
 
 .feedback .arrow {
@@ -1556,10 +1679,378 @@ nav {
 
 .feedback .client .client_info .info_text p{
     font-size: 14px;
+    color: #5c727daf;
+    font-family: var(--second-font);
 }
 
 
 
 /* ==========================
-   Testomonial Style end
+Testomonial Style end
 ============================== */
+
+
+
+/* ==========================
+Blog Style start
+============================== */
+/* Blog Section Styles */
+#blog {
+  padding-top: 321px;
+  padding-bottom: 192px;
+  text-align: center;
+}
+
+/* Optional fix for container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.blog_container h3 {
+  display: inline-block;
+  border-radius: 1000px;
+  background-color: hsla(0, 95%, 65%, 0.12);
+  padding: 5px 28px;
+  color: #FF5A3C;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: var(--second-font);
+}
+
+.blog_container h2 {
+  font-size: 48px;
+  font-weight: bold;
+  font-family: var(--main-font);
+  margin-bottom: 38px;
+  max-width: 525px;
+  margin: 0 auto;
+}
+
+
+.blog_post {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-areas: "box1 box3 box4"
+    "box2 box3 box4";
+    gap: 30px;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.box1{
+    grid-area: box1;
+    background: linear-gradient(#7b7b8687, #7b7b866e), url("../images/blog_1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.box2{
+    grid-area: box2;
+    background: linear-gradient(#7b7b8687, #7b7b866e), url("../images/blog_2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.box3{
+    grid-area: box3;
+    background: linear-gradient(#7b7b8687, #7b7b866e), url("../images/blog_3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.box4{
+    grid-area: box4;
+    background: linear-gradient(#7b7b8687, #7b7b866e), url("../images/blog_4.png") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.grid_card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.grid_card{
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    min-height: 250px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: start;
+    padding: 20px;
+    gap: 10px;
+    
+
+}
+
+.grid_card p{
+  font-size: 15px;
+  font-family: var(--second-font);
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.grid_card p span {
+  align-self: flex-start;
+  background: #fff;
+  color: #000;
+  border-radius: 50px;
+  padding: 6px 16px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.grid_card h2 {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: var(--main-font);
+  text-align: left;
+  color: #fff;
+}
+
+.grid_card a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--second-font);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+
+/* ==========================
+   Blog Style end
+============================== */
+
+
+
+
+
+
+/* ==========================
+   Explore Style  start
+============================== */
+
+
+#explore .explore_container{
+    padding: 45px 60px;
+    background-color: #FF5A3C;
+    position: absolute;
+    z-index: 2;
+    width: 1170px;
+    transform: translateY(-50%);
+}
+
+.explore_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.explore_container h2{
+    font-size: 32px;
+    color: #fff;
+    font-family: var(--main-font);
+    font-weight: 600;
+}
+
+.explore_container p{
+    font-size: 18px;
+    font-family: var(--second-font);
+    margin-top: 11px;
+    color: #fff;
+}
+
+.explore_container button{
+    padding: 21px 31px;
+    background-color: #fff;
+    border: none;
+    font-size: 18px;
+    font-family: var(--second-font);
+    color: #FF5A3C;
+    cursor: pointer;
+}
+
+.explore_container button i{
+    vertical-align: middle;
+}
+
+/* ==========================
+   Explore Style End
+============================== */
+
+
+
+
+
+
+
+
+
+/* ==========================
+   Footer Style start
+============================== */
+footer{
+    background: #171B2A;
+    padding: 200px 0;
+    position: relative;
+    
+}
+
+.footer_container .about_footer{
+    max-width: 309px;
+}
+
+.footer_container  h3{
+    color: #fff;
+    font-size: 20px;
+    font-family: var(--main-font);
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.footer_container .about_footer p{
+    margin-bottom: 30px;
+    color: #fff;
+    font-size: 16px;
+    font-family: var(--second-font);
+    line-height: 2;
+}
+
+.footer_container .about_footer .footer_icons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer_container  .about_footer .footer_icons .icon {
+    height: 41px;
+    width: 41px;
+    border-radius: 50%;
+    background: #FFF;
+    position: relative;
+}
+
+.footer_container  .about_footer .footer_icons .icon:nth-child(3){
+    background: #FF5A3C;
+}
+
+.footer_container  .about_footer .footer_icons .icon:nth-child(3) i{
+    color: #fff;
+}
+
+.footer_container .about_footer .footer_icons .icon i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.footer_container {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    
+}
+
+.footer_container ul li{
+    margin-bottom: 18px;
+}
+
+.footer_container ul li a{
+    color: #fff;
+    font-family: var(--second-font);
+    font-size: 16px;
+}
+
+.footer_container .info p{
+    max-width: 310px;
+    color: #ffffffdd;
+    font-size: 16px;
+    font-family: var(--second-font);
+    margin-top: 17px;
+}
+
+.footer_container .info .location{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 28px;
+    margin-bottom: 35px;
+}
+
+.footer_container .info .location p{
+    margin: 0;
+    font-weight: 300;
+}
+
+.footer_container .info .location i{
+    color: #fff;
+    vertical-align: middle;
+}
+
+.footer_container .info .subscribe{
+  display: flex;
+  background: white;
+  overflow: hidden;
+  padding: 5px;
+}
+
+.footer_container .info .subscribe input {
+  flex: 1;
+  padding: 14px 18px;
+  border: none;
+  font-size: 18px;
+  outline: none;
+  color: #2e3b6e;
+}
+
+.footer_container .info .subscribe button {
+  padding: 14px 28px;
+  background-color: #ff5733;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+
+}
+
+.privacy_policy{
+    background: hsla(0, 0%, 100%, 0.127);
+    padding: 28px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.privacy_container p{
+    color: #ffffffdb;
+    font-family: var(--second-font);
+    font-size: 14px;
+}
+.privacy_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ==========================
+   Footer Style end
+============================== */
+
